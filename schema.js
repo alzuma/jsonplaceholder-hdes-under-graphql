@@ -78,7 +78,7 @@ const QueryType = new GraphQLObjectType({
             },
             resolve: (root, args, {loaders}) => loaders.user.load(`/users/${args.id}/`)
         },
-        allUser: {
+        allUsers: {
             type: GraphQLList(UserType),
             resolve: (root, args, {loaders}) => loaders.user.allUsers()
         },
@@ -89,7 +89,7 @@ const QueryType = new GraphQLObjectType({
             },
             resolve: (root, args, {loaders}) => loaders.user.load(`/posts/${args.id}/`)
         },
-        allPost: {
+        allPosts: {
             type: GraphQLList(PostType),
             resolve: (root, args, {loaders}) => loaders.post.allUsers()
         },
